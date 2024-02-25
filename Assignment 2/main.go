@@ -36,7 +36,6 @@ func main() {
 	pers2.name = "Bob Johnson"
 	pers2.age = 35
 
-	// printPersonInfo(pers1, 1)
 	pers1.Print(1)
 	pers2.Print(2)
 
