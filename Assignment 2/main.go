@@ -8,6 +8,21 @@ type Person struct {
 	address string
 }
 
+func (person Person) Print(personNum int) {
+	fmt.Printf("Person %v:\n", personNum)
+	fmt.Println("Name: ", person.name)
+	fmt.Println("Age: ", person.age)
+
+	if person.address != "" {
+		fmt.Println("Address: ", person.address)
+	}
+	fmt.Println()
+}
+
+func (person Person) SCREAM() {
+	fmt.Println("AAAAHHHHHHHHHHHHHHHHH")
+}
+
 func main() {
 	var pers1 Person
 	var pers2 Person
@@ -21,12 +36,15 @@ func main() {
 	pers2.name = "Bob Johnson"
 	pers2.age = 35
 
-	//  Access and print Pers1 info
-	fmt.Println("Name: ", pers1.name)
-	fmt.Println("Age: ", pers1.age)
-	fmt.Println("Address: ", pers1.address)
+	// printPersonInfo(pers1, 1)
+	pers1.Print(1)
+	pers2.Print(2)
 
-	//  Access and print Pers2 info
-	fmt.Println("Name: ", pers2.name)
-	fmt.Println("Age: ", pers2.age)
+	pers1.address = "320 Borden Rd"
+	pers2.age = 36
+
+	pers1.Print(1)
+	pers2.Print(2)
+
+	pers1.SCREAM()
 }
