@@ -22,11 +22,17 @@ func main() {
 	pers2.age = 35
 
 	//  Access and print Pers1 info
+	fmt.Println("Person 1:")
 	fmt.Println("Name: ", pers1.name)
 	fmt.Println("Age: ", pers1.age)
 	fmt.Println("Address: ", pers1.address)
 
 	//  Access and print Pers2 info
+	fmt.Println("Person 2:")
 	fmt.Println("Name: ", pers2.name)
 	fmt.Println("Age: ", pers2.age)
+
+	pers1.address = "320 Borden Rd"
+	fmt.Println("Address: ", pers1.address)
+
 }
